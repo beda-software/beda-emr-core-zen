@@ -74,18 +74,18 @@
                                                   :fhir/extensionUri "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression",
                                                   :fhir/flags #{:MS}},
                            :start {:confirms #{hl7-fhir-r4-core.integer/schema}
-                                   :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/slider-start"}
+                                   :fhir/extensionUri "https://emr.beda.software/StructureDefinition/slider-start"}
                            :stop {:confirms #{hl7-fhir-r4-core.integer/schema}
-                                  :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/slider-stop"}
+                                  :fhir/extensionUri "https://emr.beda.software/StructureDefinition/slider-stop"}
                            :startLabel {:confirms #{hl7-fhir-r4-core.string/schema}
-                                        :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/slider-start-label"}
+                                        :fhir/extensionUri "https://emr.beda.software/StructureDefinition/slider-start-label"}
                            :stopLabel {:confirms #{hl7-fhir-r4-core.string/schema}
-                                       :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/slider-stop-label"}
+                                       :fhir/extensionUri "https://emr.beda.software/StructureDefinition/slider-stop-label"}
                            :helpText {:confirms #{hl7-fhir-r4-core.string/schema}
-                                      :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/help-text"}
+                                      :fhir/extensionUri "https://emr.beda.software/StructureDefinition/help-text"}
 
                            :adjustLastToRight {:confirms #{hl7-fhir-r4-core.boolean/schema}
-                                               :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/adjust-last-to-right"}
+                                               :fhir/extensionUri "https://emr.beda.software/StructureDefinition/adjust-last-to-right"}
                            :unit {:confirms #{hl7-fhir-r4-core.questionnaire-unit/schema},
                                   :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"}
                            :unitOption {:type zen/vector,
@@ -93,24 +93,24 @@
                                                 :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
                                                 :fhir/flags #{:MS}}},
                            :macro {:confirms #{hl7-fhir-r4-core.string/schema}
-                                   :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/macro"}
+                                   :fhir/extensionUri "https://emr.beda.software/StructureDefinition/macro"}
                            ;; use hidden key over itemHidden from zen sdc zen profile
                            :hidden {:confirms #{hl7-fhir-r4-core.questionnaire-hidden/schema},
                                     :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"},
                            :inlineChoiceDirection {:confirms #{hl7-fhir-r4-core.string/schema}
-                                                   :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/inline-choice-direction"}
+                                                   :fhir/extensionUri "https://emr.beda.software/StructureDefinition/inline-choice-direction"}
                            :rowsNumber {:confirms #{hl7-fhir-r4-core.integer/schema},
-                                        :fhir/extensionUri "https://beda.software/fhir-emr-questionnaire/rows-number"}}}
+                                        :fhir/extensionUri "https://emr.beda.software/StructureDefinition/rows-number"}}}
 
  schema
  {:zen/tags #{zen.fhir/profile-schema zen/schema}
   :zen.fhir/type "Questionnaire"
-  :zen.fhir/profileUri "https://beda.software/beda-emr-questionnaire"
+  :zen.fhir/profileUri "https://emr.beda.software/StructureDefinition/fhir-emr-questionnaire"
   :type zen/map
   :zen.fhir/version "0.6.32"
   :keys {:mapping {:type zen/vector
                    :every {:confirms #{hl7-fhir-r4-core.Reference/schema}
-                           :fhir/extensionUri "http://beda.software/fhir-extensions/questionnaire-mapper"}}
+                           :fhir/extensionUri "https://emr.beda.software/StructureDefinition/questionnaire-mapper"}}
          :assembledFrom {:fhir/extensionUri "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
                          :confirms #{hl7-fhir-r4-core.canonical/schema}}
          :sourceQueries {:type zen/vector
