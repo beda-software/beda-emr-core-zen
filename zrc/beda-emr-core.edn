@@ -3,5 +3,5 @@
  profiles {:zen/tags #{zen.fhir/profiles}
            :schemas
            {"Questionnaire"
-            {"https://emr.beda.software/StructureDefinition/fhir-emr-questionnaire"
+            {"https://emr-core.beda.software/StructureDefinition/fhir-emr-questionnaire"
              #zen/quote beda-emr-core.questionnaire/schema}}}}
