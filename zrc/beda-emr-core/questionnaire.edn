@@ -99,6 +99,10 @@
                                     :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"},
                            :inlineChoiceDirection {:confirms #{hl7-fhir-r4-core.string/schema}
                                                    :fhir/extensionUri "https://emr-core.beda.software/StructureDefinition/inline-choice-direction"}
+                           :minOccurs {:confirms #{hl7-fhir-r4-core.integer/schema},
+                                       :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs"}
+                           :maxOccurs {:confirms #{hl7-fhir-r4-core.integer/schema},
+                                       :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs"}
                            :rowsNumber {:confirms #{hl7-fhir-r4-core.integer/schema},
                                         :fhir/extensionUri "https://emr-core.beda.software/StructureDefinition/rows-number"}
                            :colsNumber {:confirms #{hl7-fhir-r4-core.integer/schema},
