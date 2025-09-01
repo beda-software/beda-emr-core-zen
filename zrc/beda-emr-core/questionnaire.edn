@@ -110,8 +110,9 @@
                                        :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs"}
                            :maxOccurs {:confirms #{hl7-fhir-r4-core.questionnaire-maxOccurs/schema},
                                        :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs"}
-                           :answerOptionsToggleExpression {:confirms #{hl7-fhir-uv-sdc.sdc-questionnaire-answerOptionsToggleExpression/schema}
-                                                           :fhir/extensionUri "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression"}
+                           :answerOptionsToggleExpression {:type zen/vector,
+                                                           :every {:confirms #{hl7-fhir-uv-sdc.sdc-questionnaire-answerOptionsToggleExpression/schema}
+                                                                   :fhir/extensionUri "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression"}}
                                                                                       
                            :macro {:confirms #{hl7-fhir-r4-core.string/schema}
                                    :fhir/extensionUri "https://emr-core.beda.software/StructureDefinition/macro"}
