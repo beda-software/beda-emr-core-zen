@@ -92,17 +92,23 @@
                                         :every {:confirms #{hl7-fhir-r4-core.questionnaire-unitOption/schema},
                                                 :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption",
                                                 :fhir/flags #{:MS}}},
-                           :macro {:confirms #{hl7-fhir-r4-core.string/schema}
-                                   :fhir/extensionUri "https://emr-core.beda.software/StructureDefinition/macro"}
+                 
                            ;; use hidden key over itemHidden from zen sdc zen profile
                            :hidden {:confirms #{hl7-fhir-r4-core.questionnaire-hidden/schema},
-                                    :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"},
+                                    :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"}
+                           :minOccurs {:confirms #{hl7-fhir-r4-core.questionnaire-minOccurs/schema},
+                                       :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs"}
+                           :maxOccurs {:confirms #{hl7-fhir-r4-core.questionnaire-maxOccurs/schema},
+                                       :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs"}
+                           :maxOccurs {:confirms #{hl7-fhir-r4-core.questionnaire-maxOccurs/schema},
+                                       :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs"}
+                           :answerOptionsToggleExpression {:confirms #{hl7-fhir-uv-sdc.sdc-questionnaire-answerOptionsToggleExpression/schema}
+                                                           :fhir/extensionUri "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerOptionsToggleExpression"}
+                                                                                      
+                           :macro {:confirms #{hl7-fhir-r4-core.string/schema}
+                                   :fhir/extensionUri "https://emr-core.beda.software/StructureDefinition/macro"}
                            :inlineChoiceDirection {:confirms #{hl7-fhir-r4-core.string/schema}
                                                    :fhir/extensionUri "https://emr-core.beda.software/StructureDefinition/inline-choice-direction"}
-                           :minOccurs {:confirms #{hl7-fhir-r4-core.integer/schema},
-                                       :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs"}
-                           :maxOccurs {:confirms #{hl7-fhir-r4-core.integer/schema},
-                                       :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs"}
                            :rowsNumber {:confirms #{hl7-fhir-r4-core.integer/schema},
                                         :fhir/extensionUri "https://emr-core.beda.software/StructureDefinition/rows-number"}
                            :colsNumber {:confirms #{hl7-fhir-r4-core.integer/schema},
