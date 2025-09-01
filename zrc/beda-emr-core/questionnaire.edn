@@ -17,6 +17,7 @@
           hl7-fhir-uv-sdc.sdc-questionnaire-answerOptionsToggleExpression
           hl7-fhir-r4-core.variable
           hl7-fhir-r4-core.entryFormat
+          hl7-fhir-r4-core.regex
           hl7-fhir-r4-core.cqf-expression
           hl7-fhir-r4-core.questionnaire-unitOption
           hl7-fhir-uv-sdc.sdc-questionnaire-answerExpression
@@ -102,6 +103,9 @@
                                     :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-hidden"}
                            :entryFormat {:confirms #{hl7-fhir-r4-core.entryFormat/schema}
                                          :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/entryFormat"}
+                           :regex {:confirms #{hl7-fhir-r4-core.regex/schema}
+                                   :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/regex"}
+                           
                            :minOccurs {:confirms #{hl7-fhir-r4-core.questionnaire-minOccurs/schema},
                                        :fhir/extensionUri "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs"}
                            :maxOccurs {:confirms #{hl7-fhir-r4-core.questionnaire-maxOccurs/schema},
