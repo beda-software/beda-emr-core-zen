@@ -140,9 +140,10 @@
          :launchContext {:type zen/vector
                          :every {:confirms #{hl7-fhir-uv-sdc.sdc-questionnaire-launchContext/schema}
                                  :fhir/extensionUri "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"}}
-         :assembleContext {:confirms #{hl7-fhir-uv-sdc.sdc-questionnaire-assembleContext/schema},
-                           :fhir/extensionUri "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembleContext",
-                           :fhir/flags #{:MS}}
+         :assembleContext {:type zen/vector
+                           :every {:confirms #{hl7-fhir-uv-sdc.sdc-questionnaire-assembleContext/schema},
+                                   :fhir/extensionUri "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembleContext",
+                                   :fhir/flags #{:MS}}}
          :itemPopulationContext {:confirms #{hl7-fhir-uv-sdc.sdc-questionnaire-itemPopulationContext/schema}
                                  :fhir/extensionUri "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext"}
          :targetStructureMap {:type zen/vector
